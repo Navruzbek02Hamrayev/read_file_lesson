@@ -8,8 +8,13 @@ def read_file(filename: str) -> list[int]:
     Returns:
         data (list): A list of integers from the file.
     """
+    l=[]
+    a=open(filename).read().split(",")
+    for i in a:
+        l.append(int(i))
     # Open the file
     # Read the file
-    return 0 
+    return l
 
 #Print list from file
+print(read_file("data.txt"))
